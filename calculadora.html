@@ -4,55 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .fundo{
-            background-image: linear-gradient(45deg,black, crimson);
-            height: 100vh;
-            color: #fff;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-        }
-        .calculadora{
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.8);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            border-radius: 15px;
-            padding: 15px;
-        }
-        .botao{
-            width: 50px;
-            height: 50px;
-            font-size: 25px;
-            cursor: pointer;
-            margin: 3px;
-            background-color: rgb(31,31,31);
-            border: none;
-            color: #fff;
-        }
-        .botao:hover{
-            background-color: black;
-        }
-        #resultado{
-            background-color: white;
-            width: 207px;
-            height: 30px;
-            margin: 5px;
-            font-size: 25px;
-            color: black;
-            text-align: right;
-            padding: 5px;
-        }
-    </style>
+	<link href="css/themes/dark.css" rel="stylesheet" id="themeStylesheetLink">
+	<link href="css/style.css" rel="stylesheet">
+    
+      
+    
 </head>
 <body>
+ 
     <div class="fundo">
-        
+        Escolha um tema:
+    <select id="themeSelect">
+        <option value="dark">Escuro</option>
+        <option value="light">Claro</option>
+    </select>
         <div class="calculadora">
             <h1>Calculadora</h1>
             <p id="resultado"></p>
@@ -89,10 +54,31 @@
         </div>
     </div>
     <script>
-	function playAudio(url) {
-  new Audio(url).play();
-}
+	
+		function initThemeSelector() {
+            const themeSelect = document.getElementById("themeSelect");
+            const themeStylesheetLink = document.getElementById("themeStylesheetLink");
+            const currentTheme = localStorage.getItem("theme") || "default";
 
+            function activateTheme(themeName) {
+                themeStylesheetLink.setAttribute("href", `css/themes/${themeName}.css`);
+            }
+
+            themeSelect.addEventListener("change", () => {
+                activateTheme(themeSelect.value);
+                localStorage.setItem("theme", themeSelect.value);
+            });
+
+
+            themeSelect.value = currentTheme;
+            activateTheme(currentTheme);
+        }
+
+        initThemeSelector();
+		
+		function playAudio(url) {
+			new Audio(url).play();
+		}
         function insert(num)
         {
             var numero = document.getElementById('resultado').innerHTML;

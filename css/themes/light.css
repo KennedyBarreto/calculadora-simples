@@ -1,0 +1,11 @@
+:root{
+	--fade: linear-gradient(45deg,#ffffff, #cacaca);
+	--corpoCalculadora:#fff;
+	--textoCorpo: #000;
+	--botoes:#f7f1f1;
+	--textoBotoes:#000;
+	--hover:#e5e4e4;
+	--painel:#f7f1f1;
+	--textoPainel: #000;
+	
+}
