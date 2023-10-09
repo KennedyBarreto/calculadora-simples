@@ -6,18 +6,18 @@
     <title>Calculadora</title>
 	<link href="css/themes/dark.css" rel="stylesheet" id="themeStylesheetLink">
 	<link href="css/style.css" rel="stylesheet">
-    
-      
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
  
     <div class="fundo">
         Escolha um tema:
-    <select id="themeSelect">
-        <option value="dark">Escuro</option>
-        <option value="light">Claro</option>
-    </select>
+        <select id="themeSelect">
+            <option value="dark">Escuro</option>
+            <option value="light">Claro</option>
+        </select>
+
         <div class="calculadora">
             <h1>Calculadora</h1>
             <p id="resultado"></p>
@@ -53,6 +53,12 @@
             </table>
         </div>
     </div>
+
+    <div class="contato">
+        <a href="https://github.com/KennedyBarreto"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/kennedy-barreto-26900b179/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/isnt.kennedy/"><i class="fab fa-instagram"></i></a>
+</div>
     <script>
 	
 		function initThemeSelector() {
@@ -100,7 +106,6 @@
             {
                 document.getElementById('resultado').innerHTML = eval(resultado);
             }
-           
         }
     </script>
 </body>

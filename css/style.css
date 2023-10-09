@@ -47,3 +47,19 @@
             border-radius: 10px;
             padding: 5px;
         }
+        .contato{
+           position: fixed;
+           bottom: 0;
+           left: 50%;
+           transform: translate(-50%,-50%);
+           border-radius: 10px;
+           padding: 10px;
+        }
+        .contato a{
+            text-decoration: none;
+            color: var(--textoCorpo);
+        }
+        .contato i{
+            padding: 10px;
+            font-size: 25px;
+        }
