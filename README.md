@@ -46,8 +46,8 @@
 
 ## :sparkles: Funcionalidades ##
 
-:heavy_check_mark: Realiza as 4 operações matemáticas basicas;
-:heavy_check_mark: Seleção de temas: Claro e Escuro;
+:heavy_check_mark: Realiza as 4 operações matemáticas basicas; <br>
+:heavy_check_mark: Seleção de temas: Claro e Escuro.
 
 
 ## :rocket: Tecnologias ##
@@ -65,7 +65,7 @@ Nenhum pré requisito necessário :checkered_flag:
 
 ## :checkered_flag: Começando ##
 
-Basta Clonar/Copiar o repositório em sua máquina e abrir através de um navegador
+Basta Clonar/Copiar o repositório em sua máquina e abrir através de um navegador.
 
 ## :memo: Licença ##
 
